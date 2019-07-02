@@ -1,0 +1,164 @@
+[
+  {
+    type: 'button'
+    tooltip: 'New File'
+    callback: 'application:new-file'
+    icon: 'file-plus'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Open File'
+    callback: 'application:open-file'
+    icon: 'file'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Save File'
+    callback: 'core:save'
+    icon: 'content-save'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Split screen - Horizontally'
+    callback: 'pane:split-right'
+    icon: 'arrow-split-vertical'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Split screen - Vertically'
+    callback: 'pane:split-down'
+    icon: 'arrow-split-horizontal'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Toggle Fullscreen'
+    callback: 'window:toggle-full-screen'
+    icon: 'fullscreen'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Toggle Sidebar'
+    callback: 'tree-view:toggle'
+    icon: 'file-tree'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Toggle Minimap'
+    dependency: 'minimap'
+    callback: 'minimap:toggle'
+    icon: 'map'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Auto indent (selection)'
+    callback: 'editor:auto-indent'
+    icon: 'format-indent-increase'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Fold all'
+    callback: 'editor:fold-all'
+    icon: 'unfold-less-horizontal'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Unfold all'
+    callback: 'editor:unfold-all'
+    icon: 'unfold-more-horizontal'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Reload Window'
+    callback: 'window:reload'
+    icon: 'reload'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Toggle Developer Tools'
+    callback: 'window:toggle-dev-tools'
+    icon: 'bug'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Run Simulator'
+    callback: 'atom-shell-commands:runsimulator'
+    icon: 'launch'
+    iconset: 'mdi'
+    hide: {
+      pattern: "!*.sv"
+    }
+  },
+  {
+    type: 'button'
+    tooltip: 'Synthesise'
+    callback: 'atom-shell-commands:synthesise'
+    icon: 'chip'
+    text: "FPGA"
+    html: true
+    iconset: 'mdi'
+    style: {
+      color: "red"
+      background: "green"
+      border: "1px solid blue"
+    }
+    hover: {
+      color: "green"
+      background: "red"
+    }
+    hide: {
+      pattern: "!*.sv"
+    }
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
+    tooltip: 'Previous Error'
+    callback: 'atom-shell-commands-config:error-prev'
+    icon: 'skip-previous'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Next Error'
+    callback: 'atom-shell-commands-config:error-next'
+    icon: 'skip-next'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Run in window'
+    callback: 'atom-shell-commands:runinwindow'
+    icon: 'console'
+    iconset: 'mdi'
+  }
+]

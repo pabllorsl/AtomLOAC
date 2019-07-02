@@ -1,0 +1,99 @@
+"*":
+  "atom-beautify":
+    cpp:
+      beautify_on_save: true
+      default_beautifier: "clang-format"
+  "atom-shell-commands":
+    commands: [
+      {
+        name: "compile"
+        command: "/usr/bin/g++"
+        arguments: [
+          "-o"
+          "{FileNameNoExt}"
+          "{FileName}"
+        ]
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):"
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+)\\s*\\((?<line>\\d+)\\)\\s*:*:"
+        ]
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-1"
+          save: true
+      }
+
+      {
+        name: "execute"
+        command: "./{FileNameNoExt}"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-2"
+      }
+
+      {
+        name: "man"
+        command: "/usr/bin/man"
+        arguments: [
+          "which"
+        ]
+        options:
+          keymap: "ctrl-alt-m"
+      }
+
+      {
+        name: "runinwindow"
+        command: "/usr/bin/python"
+        arguments: [
+          ".atom/terminal.py"
+          "-m"
+          "gnome-terminal"
+          "--wait"
+          "ls"
+          "-l"
+        ]
+        options:
+          keymap: "ctrl-alt-n"
+      }
+
+      {
+        name: "runsimulator"
+        command: "/usr/bin/python"
+        arguments: [
+          "../../../.atom/terminal.py"
+          "-m"
+          "gnome-terminal"
+          "--wait"
+          "make"
+        ]
+        options:
+          cwd: "{FileDir}"
+          save: true
+      }
+
+      {
+        name: "synthesise"
+        command: "/usr/bin/python"
+        arguments: [
+          "../../../.atom/terminal.py"
+          "-m"
+          "gnome-terminal"
+          "--wait"
+          "make sim"
+        ]
+        options:
+          cwd: "{FileDir}"
+          save: true
+      }
+    ]
+  core:
+    telemetryConsent: "no"
+  "exception-reporting":
+    userId: "bd5a4f90-a55f-4945-8a65-84292b9be24f"
+  minimap: {}
+  welcome:
+    showOnStartup: false
+".source.systemverilog":
+  editor:
+    showIndentGuide: true
