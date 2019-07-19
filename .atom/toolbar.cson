@@ -108,6 +108,30 @@
   },
   {
     type: 'button'
+    tooltip: 'Previous Error'
+    callback: 'atom-shell-commands-config:error-prev'
+    icon: 'skip-previous'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Next Error'
+    callback: 'atom-shell-commands-config:error-next'
+    icon: 'skip-next'
+    iconset: 'mdi'
+  },
+  {
+    type: 'button'
+    tooltip: 'Run in window'
+    callback: 'atom-shell-commands:runinwindow'
+    icon: 'console'
+    iconset: 'mdi'
+  },
+  {
+    type: 'spacer'
+  },
+  {
+    type: 'button'
     tooltip: 'Run Simulator'
     callback: 'atom-shell-commands:runsimulator'
     icon: 'launch'
@@ -137,28 +161,4 @@
       pattern: "!*.sv"
     }
   },
-  {
-    type: 'spacer'
-  },
-  {
-    type: 'button'
-    tooltip: 'Previous Error'
-    callback: 'atom-shell-commands-config:error-prev'
-    icon: 'skip-previous'
-    iconset: 'mdi'
-  },
-  {
-    type: 'button'
-    tooltip: 'Next Error'
-    callback: 'atom-shell-commands-config:error-next'
-    icon: 'skip-next'
-    iconset: 'mdi'
-  },
-  {
-    type: 'button'
-    tooltip: 'Run in window'
-    callback: 'atom-shell-commands:runinwindow'
-    icon: 'console'
-    iconset: 'mdi'
-  }
 ]
